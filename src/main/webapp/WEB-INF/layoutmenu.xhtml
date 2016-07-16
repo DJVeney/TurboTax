@@ -1,0 +1,46 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pv="http://primefaces.org/venture">
+
+    
+    <h:form id="menuform">
+       
+      <pv:menu>
+                    <p:submenu id="om_dashboards" label="DASHBOARD">
+                        <p:menuitem id="om_db_home" value="Inicio" icon="icon-lightbulb" outcome="/main/home"/>
+                        <p:menuitem id="om_db_sc" value="Dashboard 1" icon="icon-lightbulb" outcome="/main/dashboard-social"/>
+                        <p:menuitem id="om_db_pm1" value="Dashboard 2" icon="icon-lightbulb" outcome="/main/dashboard-pm"/>
+                        <p:menuitem id="om_db_pm2" value="Dashboard 3" icon="icon-lightbulb" outcome="/main/dashboard-pm-2"/>
+                    </p:submenu>
+                    <p:submenu id="om_menuoptcolor" label="MENU AND COLOR OPTIONS">
+                        <p:menuitem id="om_def" url="#" value="Default Menu Option" icon="icon-checklist" onclick="Venture.changeBodyClass('');return false;"/>
+                        <p:menuitem id="om_fixed" url="#" value="Fixed Default Menu Option" icon="icon-checklist" onclick="Venture.changeBodyClass('FixedMenu');return false;"/>
+                        <p:menuitem id="om_popup" url="#" value="Popup Menu Option" icon="icon-duplicate" onclick="Venture.changeBodyClass('PopupMenu');return false;"/>
+                        <p:submenu id="tpbr_colors" label="Topbar Color Options" icon="icon-chevron-down">
+                            <p:menuitem id="om_bg_yellow" url="#" value="Yellow Color" icon="icon-brush" onclick="Venture.changeBodyClass('YellowTopbar');return false;"/>
+                            <p:menuitem id="om_bg_orange" url="#" value="Orange Color" icon="icon-brush" onclick="Venture.changeBodyClass('OrangeTopbar');return false;"/>
+                            <p:menuitem id="om_bg_aqua" url="#" value="Aqua Color" icon="icon-brush" onclick="Venture.changeBodyClass('AquaTopbar');return false;"/>
+                            <p:menuitem id="om_bg_blue" url="#" value="Blue Color" icon="icon-brush" onclick="Venture.changeBodyClass('BlueTopbar');return false;"/>
+                            <p:menuitem id="om_bg_red" url="#" value="Red Color" icon="icon-brush" onclick="Venture.changeBodyClass('RedTopbar');return false;"/>
+                            <p:menuitem id="om_bg_green" url="#" value="Green Color" icon="icon-brush" onclick="Venture.changeBodyClass('GreenTopbar');return false;"/>
+                            <p:menuitem id="om_bg_purple" url="#" value="Purple Color" icon="icon-brush" onclick="Venture.changeBodyClass('PurpleTopbar');return false;"/>
+                            <p:menuitem id="om_bg_pink" url="#" value="Pink Color" icon="icon-brush" onclick="Venture.changeBodyClass('PinkTopbar');return false;"/>
+                        </p:submenu>
+                        <p:submenu id="bg_colors" label="Background Color Options" icon="icon-chevron-down">
+                            <p:menuitem id="bg_palegreen" url="#" value="Pale Green" icon="icon-brush" onclick="Venture.changeBodyClass('PaleGreenBG');return false;"/>
+                            <p:menuitem id="bg_paleblue" url="#" value="Pale Blue" icon="icon-brush" onclick="Venture.changeBodyClass('PaleBlueBG');return false;"/>
+                            <p:menuitem id="bg_leaden" url="#" value="Leaden" icon="icon-brush" onclick="Venture.changeBodyClass('LeadenBG');return false;"/>
+                            <p:menuitem id="bg_dark" url="#" value="Dark" icon="icon-brush" onclick="Venture.changeBodyClass('DarkBG');return false;"/>
+                            <p:menuitem id="bg_darkpurple" url="#" value="Dark Purple" icon="icon-brush" onclick="Venture.changeBodyClass('DarkPurpleBG');return false;"/>
+                        </p:submenu>
+                    </p:submenu>
+                  
+                 
+                </pv:menu>
+    </h:form>
+
+</ui:composition>
